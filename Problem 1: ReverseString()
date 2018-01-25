@@ -1,0 +1,8 @@
+function reverseString(str) {
+    return str.split("").reverse().join("");
+    //.split creates array out of the string a,b,c,d
+    //.reverse changed the order of the array
+    //.join puts it all back together
+}
+reverseString("");
+console.log(reverseString("Reverse"))
