@@ -1,0 +1,10 @@
+
+function isUnique(array) {
+    if ([0] !== [1] && [0] !== [2])
+        console.log("true")
+    else
+        console.log("false")
+}
+
+var array = ["help", "maybe", "no"]
+console.log(isUnique(array));
