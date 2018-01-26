@@ -1,10 +1,25 @@
-
+// 1st run to prove False
 function isUnique(array) {
-    if ([0] !== [1] && [0] !== [2])
+    if ([0] == [1] && [0] == [2])
         console.log("true")
     else
         console.log("false")
 }
 
-var array = ["help", "maybe", "no"]
+var array = new Array("sun", "moon", "sky");
+
+
+console.log(isUnique(array));
+
+// 2nd run to prove True
+function isUnique(array) {
+    if ([0] == [1] && [0] == [2])
+        console.log("true")
+    else
+        console.log("false")
+}
+
+var array = new Array("0", "0", "0");
+
+
 console.log(isUnique(array));
