@@ -1,0 +1,34 @@
+function deepEqual (object1, object2) {
+    if (object1 === object2) {
+        return true;
+    }
+
+//typeof x == "object" && x != null
+    else if (typeof object1 == "object" || object1 !== null || typeof object2 == "object" || object2 !== null) {
+        return false;
+    }
+
+    var i = 0;
+    var j = 0;
+
+    for (var test in object1) {
+        i++;
+    }
+    for (var test in object2) {
+        j++;
+    }
+        if (!(test in object1) || !deepEqual(object1[test], object2[test])){
+            return false;
+    }
+
+}
+
+// Your code here.
+
+var obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true (Not sure why this isn't working right. 
